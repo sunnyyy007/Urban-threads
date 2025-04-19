@@ -1,0 +1,159 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Urban Threads</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdfdfd;
+      color: #222;
+    }
+    header, footer {
+      background-color: #111;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    .hero {
+      text-align: center;
+      padding: 2rem;
+      background-color: #eee;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 2rem;
+    }
+    .product {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .product select, .product input[type="radio"] {
+      margin: 0.5rem 0;
+    }
+    .contact, .reviews {
+      padding: 2rem;
+      text-align: center;
+    }
+    input, textarea, select {
+      padding: 0.5rem;
+      margin: 0.5rem;
+      width: 80%;
+      max-width: 400px;
+    }
+    button {
+      padding: 0.6rem 1.2rem;
+      background-color: #111;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    .cart {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background-color: #fff;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      display: none;
+    }
+    .promo-banner {
+      background: #ffc107;
+      text-align: center;
+      padding: 0.5rem;
+      font-weight: bold;
+    }
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 1rem;
+    }
+    .gallery img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="promo-banner">Spring Sale! Use code SPRING15 for 15% off</div>  <header>
+    <h1>Urban Threads</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>  <section class="hero" id="home">
+    <h2>Style Meets Comfort</h2>
+    <p>Explore our modern essentials, made for everyday living.</p>
+  </section>  <section class="products" id="shop">
+    <!-- Example Product Card -->
+    <div class="product">
+      <img src="https://via.placeholder.com/300x200" alt="White Tee" />
+      <h3>Classic White Tee</h3>
+      <p>$20</p>
+      <label>Size:</label>
+      <select>
+        <option>Small</option>
+        <option>Medium</option>
+        <option>Large</option>
+        <option>XL</option>
+      </select>
+      <div class="gallery">
+        <img src="https://via.placeholder.com/80" alt="Alt view">
+        <img src="https://via.placeholder.com/80" alt="Close-up">
+      </div>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="youremail@example.com">
+        <input type="hidden" name="item_name" value="Classic White Tee">
+        <input type="hidden" name="amount" value="20.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <button type="submit">Buy Now</button>
+      </form>
+      <div class="reviews">
+        <h4>Customer Reviews</h4>
+        <p>★★★★★ – "Super soft and fits great!"</p>
+      </div>
+    </div>
+    <!-- Repeat similar cards for other products -->
+  </section>  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Have a question or want to order directly?</p>
+    <form>
+      <input type="text" placeholder="Your Name" required /><br />
+      <input type="email" placeholder="Your Email" required /><br />
+      <textarea placeholder="Your Message" rows="4"></textarea><br />
+      <button type="submit">Send</button>
+    </form>
+  </section>  <footer>
+    <p>&copy; 2025 Urban Threads. All rights reserved.</p>
+  </footer>  <script>
+    // Shopping cart placeholder for future logic
+    const cart = [];
+    function addToCart(item) {
+      cart.push(item);
+      alert(item + " added to cart!");
+    }
+  </script></body>
+</html>
